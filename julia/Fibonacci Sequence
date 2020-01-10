@@ -13,8 +13,8 @@ a=Int64[]
             f=a[i-1]+a[i-2]
             push!(a,f) 
         end            
-    i= i+1
-    end
+      i= i+1
+      end
 
 return println("the Fibonacci sequence for N=", N, " is ", a)
 
