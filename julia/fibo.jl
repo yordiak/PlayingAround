@@ -1,4 +1,3 @@
-# Find the first N numbers of a Fibonacci sequence of any number n. 
 
 function fibo(n,N)
 
