@@ -1,6 +1,7 @@
-# Find the Fibonacci series for N numbers...
+# Find the first N numbers of a Fibonacci sequence of any number n. 
 
-function fibo(N)
+function fibo(n,N)
+
 f=0
 a=Int64[]
 
@@ -8,7 +9,7 @@ a=Int64[]
         if i==1
            push!(a,0)
         elseif i==2
-            push!(a,1)
+            push!(a,n)
         else
             f=a[i-1]+a[i-2]
             push!(a,f) 
@@ -16,6 +17,6 @@ a=Int64[]
     i= i+1
     end
 
-return println("the Fibonacci sequence for N=", N, " is ", a)
+return println("The fist , N, " numbers of a Fibonacci sequence of n=", n, " is ", a)
 
 end
