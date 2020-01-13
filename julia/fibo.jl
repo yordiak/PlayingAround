@@ -1,3 +1,4 @@
+# For any positive number n, determine the N first numbers of a Fibonacci sequenc
 
 function fibo(n,N)
 
