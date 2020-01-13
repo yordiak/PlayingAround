@@ -1,8 +1,10 @@
-using JuMP, Plots, Gurobi
+# Performing sensitivity analysis of the objective value, 
+# as the parameter of a specific variable varieties
+# between 0 and 1.
 
-# Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
+using JuMP, Plots, Gurobi # or any other solver
 
-function run_model()
+function run_model() # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
 
     m=Model(with_optimizer(Gurobi.Optimizer))
 
