@@ -1,9 +1,9 @@
 # For any positive number n, determine the first N numbers of a Fibonacci sequenc
 
-function fibo(n,N)
+function fibo(n::Float64,N::Int64)
 
 f=0
-a=Int64[]
+a=Float64[]
 
     for i=1:N
         if i==1
