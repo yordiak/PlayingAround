@@ -1,4 +1,4 @@
-# For any positive number n, determine the first N numbers of a Fibonacci sequenc
+# For any positive number n, determine the first N numbers of a Fibonacci sequence
 
 function fibo(n::Float64,N::Int64)
 
