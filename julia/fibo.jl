@@ -17,7 +17,7 @@ a=Float64[]
     i= i+1
     end
 
-return println("The fist ", N, " terms of a Fibonacci sequence of the number ", n, " is ", a)
+return println("The fist $N terms of a Fibonacci sequence of the number $n is $a")
 
 end
  
