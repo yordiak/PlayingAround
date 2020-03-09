@@ -1,1 +1,1 @@
-In this repository you can find small games-experiments on programming mostly in Julia programming language.
+This is a Julia playground, an attempt to learn-by-doing the Julia programming language. Feel free to suggest improvements/modifications on the code provided. 
