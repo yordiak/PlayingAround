@@ -4,7 +4,7 @@ function fibo(n::Any,N::Int64)
 
 f=0
     
-(typeof(n)==Int64) ? a=Int64[] : a=Flot64[] #specifying how the fibonacci sequence is presenting
+(typeof(n)==Int64) ? a=Int64[] : a=Float64[] #specifying how the fibonacci sequence is presenting
 
 for i=1:N
     if i==1
@@ -16,10 +16,8 @@ for i=1:N
         push!(a,f) 
     end
         
-i= i+1
-        
 end
 
-return println("The fist $N terms of a Fibonacci sequence of the number $n is $a")
+println("The fist $N terms of a Fibonacci sequence of the number $n is $a")
 
 end
