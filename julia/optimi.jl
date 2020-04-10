@@ -2,9 +2,13 @@
 # as the parameter of a specific variable varieties
 # between 0 and 1.
 
-using JuMP, Plots, Gurobi # or any other solver
+using JuMP                                               # Loading the basic library for optimization
+using Clp, Gurobi, Xpress                                # Loading solvers
 
-function run_model(op) # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
+
+# Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
+# op argument = specifying the solver
+function run_model(op) 
     
     
     m=Model(op)
