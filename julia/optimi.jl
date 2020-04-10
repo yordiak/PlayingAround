@@ -4,9 +4,10 @@
 
 using JuMP, Plots, Gurobi # or any other solver
 
-function run_model() # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
-
-    m=Model(with_optimizer(Gurobi.Optimizer))
+function run_model(op) # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
+    
+    
+    m=Model(op)
 
 
     @variable(m, x>=0)
