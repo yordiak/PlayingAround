@@ -8,10 +8,10 @@ using Clp, Gurobi, Xpress                                # Loading solvers
 
 # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
 # op argument = specifying the solver
-function run_model(name_optimizer) 
+function run_model(solver_name) 
     
     
-    m=Model(name_optimizer.Optimizer)
+    m=Model(solver_name.Optimizer)
 
 
     @variable(m, x>=0)
