@@ -20,22 +20,24 @@ function run_model(solver_name)
     @constraint(m, 2*x-4>=0)
     @constraint(m, y-0.5*x>=0)
 
+   # Storing optimal solutions                                     
+    obj_val=Float64[]                                     
+    opt_x = Float64[]
+    opt_y=Float64[]
 
-    k=0 # iteration index
-    obj_val=Float64[] # storing objective values
+    for k in 0:0.2:1
 
-    while k<=1
-        φ(x,y,k)=3*x+k*y # objective function
+        φ(x,y,k) = 3*x+k*y                                # objective function
 
         @objective(m, Max, φ(x,y,k))
     
         optimize!(m)
 
         push!(obj_val, objective_value(m))
+        push!(opt_x, value(x))
+        push!(opt_y, value(y))
     
-        k +=0.2
     end
 
-return obj_val
 
 end
