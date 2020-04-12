@@ -8,10 +8,10 @@ using Clp, Gurobi, Xpress                                # Loading solvers
 
 # Creating a function in order to improve speed and avoiding the 'global' argument of 'k'
 # op argument = specifying the solver
-function run_model(op) 
+function run_model(name_optimizer) 
     
     
-    m=Model(op)
+    m=Model(name_optimizer.Optimizer)
 
 
     @variable(m, x>=0)
@@ -39,14 +39,3 @@ function run_model(op)
 return obj_val
 
 end
-
-run_model() # generating data
-
-
-# Plotting the data
-
-k=[i for i in 0:0.2:1]
-
-gr() # blackened
-
-plot(k,obj_val)
