@@ -17,6 +17,5 @@ fibo <- function(n,trms){
     else if (i==2){f <- c(f,n)}
     else {f <- c(f,f[i-1]+f[i-2])}
   }
-  
-  print(f)                                   # printing the Fibonacci sequence
+    print(f)                                   # printing the Fibonacci sequence
 }
